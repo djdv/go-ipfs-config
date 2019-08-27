@@ -52,7 +52,7 @@ func Init(out io.Writer, nBitsForKeypair int) (*Config, error) {
 			IPFS: "/ipfs",
 			IPNS: "/ipns",
 		},
-
+		FileSystem: FileSystem{map[string]string{"9P": "/unix/$IPFS_PATH/filesystem.9p.sock"}},
 		Ipns: Ipns{
 			ResolveCacheSize: 128,
 		},
